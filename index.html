@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mint dApp</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- Hero Section -->
+
+    <div class="px-4 py-5 my-5 text-center">
+      <img
+        class="d-block mx-auto mb-4"
+        src="./assets/1.png"
+        alt=""
+        width="350"
+        height="350"
+      />
+      <h1 class="display-5 fw-bold">Sats Domain</h1>
+      <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4">
+          Pesquise por domínios existentes e crie<br>automaticamente os metadados para seu domínio SATS.
+          <br /><i>(A extensão .sats é acescentada automaticamente)</i> 
+        </p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+          <input id="dominio" type="text" placeholder="Domínio Pesquisa"/>.sats<br>
+          <button
+            onclick="pesquisar()"
+            type="button"
+            class="btn btn-dark btn-lg px-4 gap-3"
+            id="pesquisar"
+          >
+            Pesquisar
+          </button>
+        </div>
+        <br />
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center" id="resultadoPesquisa"></div>
+        <br />
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+          <input id="nome" type="text" placeholder="Domínio" style="height: 48px;" />.sats<br>
+          <input id="carteira" type="text" placeholder="Carteira" />
+        </div>
+        <br />
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+          <input id="nostr" type="text" placeholder="Nostr" /><br>
+          <button
+            onclick="montar()"
+            type="button"
+            class="btn btn-dark btn-lg px-4 gap-3"
+          >
+            Montar
+          </button>
+        </div>
+        <br />
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+          <textarea id="resultado" rows="4" cols="50" readonly></textarea>
+        </div>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+          Após criar o metadado, vá em <a href="https://gamma.io/ordinals" target="_blank">Gamma.io</a> e crie o domínio.
+        </div>
+        <br />
+        <p>Feito de &hearts; por CariocaNFT</p>
+      </div>
+    </div>
+
+    <!-- End of Hero Section -->
+
+    <!-- Scripts -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./index.js" type="application/javascript"></script>
+  </body>
+</html>
